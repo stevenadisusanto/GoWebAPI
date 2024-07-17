@@ -7,7 +7,7 @@ RUN mkdir /app
 WORKDIR /app
 
 # Cache dependencies - this will only rerun if go.mod or go.sum changes
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 
 # Copy the source code into the container
